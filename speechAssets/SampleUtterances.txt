@@ -1,0 +1,23 @@
+GetFirstEventIntent tell me about {artist}
+GetFirstEventIntent who is {artist}
+GetFirstEventIntent who were {artist}
+GetFirstEventIntent who are {artist}
+GetFirstEventIntent {artist}
+
+GetNextEventIntent ok
+GetNextEventIntent okay
+GetNextEventIntent for sure
+GetNextEventIntent yee
+GetNextEventIntent yes
+GetNextEventIntent yup
+GetNextEventIntent sure
+GetNextEventIntent yes please
+
+AMAZON.StopIntent no
+AMAZON.StopIntent nope
+AMAZON.StopIntent no thanks
+AMAZON.StopIntent no thank you
+AMAZON.StopIntent naw
+AMAZON.StopIntent gnaw
+AMAZON.StopIntent naw man
+AMAZON.StopIntent naw dawg
