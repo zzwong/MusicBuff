@@ -1,35 +1,3 @@
-
-/**
-    Copyright 2014-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-        http://aws.amazon.com/apache2.0/
-    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-*/
-
-/**
- * This sample shows how to create a Lambda function for handling Alexa Skill requests that:
- *
- * - Web service: communicate with an external web service to get events for specified days in Music (Wikipedia API)
- * - SSML: Using SSML tags to control how Alexa renders the text-to-speech.
- *
- * Examples:
- * One-shot model:
- * User:  "Alexa, ask Music Buff what happened on August thirtieth."
- * Alexa: "For August thirtieth, in 2003, [...] . Wanna go deeper in Music?"
- * User: "No."
- * Alexa: "Good bye!"
- *
- * Dialog model:
- * User:  "Alexa, open Music Buff"
- * Alexa: "Music Buff. What day do you want events for?"
- * User:  "August thirtieth."
- * Alexa: "For August thirtieth, in 2003, [...] . Wanna go deeper in Music?"
- * User:  "Yes."
- * Alexa: "In 1995, Bosnian war [...] . Wanna go deeper in Music?"
- * User: "No."
- * Alexa: "Good bye!"
- */
-
 'use strict';
 var Alexa = require('alexa-sdk');
 
@@ -38,7 +6,9 @@ var Alexa = require('alexa-sdk');
  */
 var APP_ID = 'amzn1.ask.skill.ab98ce03-0b6c-4aed-a589-118b10880389';
 
-// Used to send GET request to Wikipedia API
+/**
+ * Used to send GET request to Wikipedia API
+ */
 var https = require('https');
 
 /**
@@ -161,9 +131,9 @@ function getWelcomeResponse(response) {
 function formatArtistString(artist){
   if (artist.indexOf(' ') == -1 ) return artist;
 
-  return artist.split(' ').map(function (x) {
-    return x.charAt(0).toUpperCase() + x.substring(1, x.length)
-  }).join('_')
+  return artist.split(' ')
+               .map(function (x) { return x.charAt(0).toUpperCase() + x.substring(1, x.length)})
+               .join('_');
 }
 
 /**
