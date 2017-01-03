@@ -27,15 +27,15 @@ To run this example skill you need to do two things. The first is to deploy the 
 
 ### Alexa Skill Setup
 1. Go to the [Alexa Console](https://developer.amazon.com/edw/home.html) and click Add a New Skill.
-2. Set "MusicBuff" for the skill name and "Music buff" as the invocation name, this is what is used to activate your skill. For example you would say: "Alexa, Ask Music Buff what happened on August thirtieth."
+2. Set "MusicBuff" for the skill name and "Music buff" as the invocation name, this is what is used to activate your skill. For example you would say: "Alexa, Ask Music Buff who are Tame Impala."
 3. Select the Lambda ARN for the skill Endpoint and paste the ARN copied from above. Click Next.
 4. Copy the Intent Schema from the included IntentSchema.json.
 5. Copy the Sample Utterances from the included SampleUtterances.txt. Click Next.
 6. [optional] go back to the skill Information tab and copy the appId. Paste the appId into the index.js file for the variable APP_ID,
    then update the lambda source zip file with this change and upload to lambda again, this step makes sure the lambda function only serves request from authorized source.
 7. You are now able to start testing your sample skill! You should be able to go to the [Echo webpage](http://echo.amazon.com/#skills) and see your skill enabled.
-8. In order to test it, try to say some of the Sample Utterances from the Examples section below.
+8. In order to test it, try to say something like: who is Tame Impala
 9. Your skill is now saved and once you are finished testing you can continue to publish your skill.
 
-Forked from Alexa Skills Kit [Samples](https://github.com/amzn/alexa-skills-kit-js)
+Forked from Alexa Skills Kit [Samples](https://github.com/amzn/alexa-skills-kit-js) .
 Refer to this repository for more information/documentation on developing Alexa Skills
